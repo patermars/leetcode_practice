@@ -1,0 +1,1 @@
+[question_url](https://leetcode.com/problems/valid-perfect-square/)

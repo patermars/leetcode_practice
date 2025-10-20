@@ -1,0 +1,1 @@
+[question_url](https://leetcode.com/problems/remove-element/submissions/787386161/)

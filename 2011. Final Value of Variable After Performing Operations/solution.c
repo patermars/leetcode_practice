@@ -1,0 +1,16 @@
+int finalValueAfterOperations(char** operations, int operationsSize) {
+    int i=0;
+    int x=0;
+    while(i<operationsSize){
+        if(strcmp(operations[i],"--X")==0 || strcmp(operations[i],"X--")==0)
+        {
+            x--;
+        }
+        else
+        {
+            x++;
+        }
+        i++;
+    }
+    return x;
+}
