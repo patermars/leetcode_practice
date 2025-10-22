@@ -8,19 +8,13 @@ int removeDuplicates(int* nums, int numsSize) {
         }
         else
         {
+            i=i-count;
             for(int j=i;j<numsSize-count;j++)
             {
                 nums[j]=nums[j+count];
             }
-            
             count=0;
         }
     }
-
-    // for(int i=0;i<numsSize;i++)
-    // {
-    //     printf("%d |",nums[i]);
-    // }
-    
-    return count;
+    return numsSize-count;
 }
