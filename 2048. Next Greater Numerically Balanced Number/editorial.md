@@ -1,0 +1,1 @@
+[question_url](https://leetcode.com/problems/next-greater-numerically-balanced-number/)
