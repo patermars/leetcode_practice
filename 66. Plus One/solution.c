@@ -1,6 +1,3 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
 int* plusOne(int* digits, int digitsSize, int* returnSize) {
     if(digits[digitsSize-1]!=9)
     {
@@ -44,17 +41,18 @@ int* plusOne(int* digits, int digitsSize, int* returnSize) {
             int* not_return = (int*)malloc((digitsSize) * sizeof(int));
             *returnSize = digitsSize;
 
-            not_return[digitsSize-1]=0;
+            for(int i=0;i<digitsSize;i++)
+                not_return[i]=digits[i];
 
-            for(int i=2;i<digitsSize+1;i++)
+            for(int i=digitsSize-1;i>=0;i--)
             {
-                if(digits[digitsSize-i]==9)
+                if(not_return[i]==9)
                 {
-                    not_return[digitsSize-i]=0;
+                    not_return[i]=0;
                 }
                 else
                 {
-                    not_return[digitsSize-i]=digits[digitsSize-i]+1;
+                    not_return[i]+=1;
                     break;
                 }
             }
